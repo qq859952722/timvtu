@@ -30,6 +30,14 @@
     "V2RAY_RAY_BUFFER_SIZE": {
        "description": "每个连接的缓存大小，单位MB，默认10。如果感觉有断流现象，请考虑将缓存改成1",
        "value": "10"
+     },   
+    "V2RAY_DOM": {
+       "description": "你的域名",
+       "value": "www.ex.com"
+     },   
+    "V2RAY_PORT": {
+       "description": "你的端口",
+       "value": "99999"
      }
   },
   "website": "https://github.com/ki8852/v2ray-heroku-undone",
