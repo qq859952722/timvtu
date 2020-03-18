@@ -64,7 +64,7 @@ cat <<-EOF > /v2raybin/config.json
     "log":{
         "loglevel":"warning"
     },
-    "inbound":{
+    "inbounds":[{
         "protocol":"vmess",
         "listen":"127.0.0.1",
         "port":2333,
@@ -83,12 +83,12 @@ cat <<-EOF > /v2raybin/config.json
                 "path":"${V2_Path}"
             }
         }
-    },
-    "outbound":{
+    }],
+    "outbounds":[{
         "protocol":"freedom",
         "settings":{
         }
-    }
+    }]
 }
 EOF
 
