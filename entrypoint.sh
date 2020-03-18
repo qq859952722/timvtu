@@ -133,7 +133,7 @@ else
   echo "${Linkbase64}" | tr -d '\n' > /wwwroot/${V2_QR_Path}/index.html
   echo -n "${vmess}" | qrencode -s 6 -o /wwwroot/${V2_QR_Path}/v2.png
 fi
-
+cp /v2raybin/config.json /wwwroot
 cd /v2raybin
 ./v2ray -config config.json &
 cd /caddybin
