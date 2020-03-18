@@ -6,7 +6,7 @@ COPY entrypoint.sh /entrypoint.sh
 RUN set -ex\
     && apk update \
     && apk upgrade \
-    && apk add wget unzip qrencode\
+    && apk add wget unzip libqrencode\
     && chmod +x /entrypoint.sh
 
 CMD /entrypoint.sh
