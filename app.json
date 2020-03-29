@@ -1,46 +1,14 @@
 {
-  "name": "V2ray简易部署",
-  "description": "Deploy V2ray to Heroku.",
-  "keywords": ["V2ray"],
-  "env": {
-    "AppName": {
-       "description": "请输入最上方填写的App Name，用于生成二维码和订阅链接，如果不想生成输入no",
-       "value": "no"
-     },
-    "VER": {
-       "description": "默认latest安装最新版本V2Ray （输入V2Ray 版本号 进行指定版本安装。例如：3.22)",
-       "value": "latest"
-     }, 
-    "UUID": {
-       "description": "Vmess协议默认UUID，请输入自己的UUID，（http://www.uuid.online/ 在线生成UUID），客户端需要此参数",
-       "value": "4890bd47-5180-4b1c-9a5d-3ef686543112"
-     },
-    "AlterID": {
-       "description": "AlterID大小，数值越大内存占用越高，客户端需要此参数",
-       "value": "64"
-     }, 
-    "V2_Path": {
-       "description": "Path路径，默认/static，为了安全你也可以使用uuid替换static，/不能少，客户端需要此参数",
-       "value": "/static"
-     },
-    "V2_QR_Path": {
-       "description": "二维码和订阅地址路径，默认qr_img，为了保密性你也可以使用uuid,但是不能与V2_Path相同。如AppName变量为no，此变量没有作用",
-       "value": "qr_img"
-     },   
-    "V2RAY_RAY_BUFFER_SIZE": {
-       "description": "每个连接的缓存大小，单位MB，默认10。如果感觉有断流现象，请考虑将缓存改成1",
-       "value": "10"
-     },   
-    "V2RAY_DOM": {
-       "description": "你的域名",
-       "value": "www.ex.com"
-     },   
-    "V2RAY_PORT": {
-       "description": "你的端口",
-       "value": "99999"
-     }
-  },
-  "website": "https://github.com/ki8852/v2ray-heroku-undone",
-  "repository": "https://github.com/ki8852/v2ray-heroku-undone",
-  "stack": "container"
- }
+	"name": "V2Ray",
+	"description": "Deploy V2ray on Heroku.",
+	"keywords": ["V2Ray"],
+	"env": {
+		"UUID": {
+			"description": "V2Ray UUID",
+			"value": "ad806487-2d26-4636-98b6-ab85cc8521f7"
+		}
+	},
+	"website": "https://ibcl.us/Heroku-V2Ray_20191014/",
+	"repository": "https://github.com/bclswl0827/v2ray-heroku",
+	"stack": "container"
+}

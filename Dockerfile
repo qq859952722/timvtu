@@ -1,12 +1,5 @@
-FROM debian:sid
-
-COPY wwwroot.tar.gz /wwwroot/wwwroot.tar.gz
-COPY entrypoint.sh /entrypoint.sh
-
-RUN set -ex\
-    && apt update -y \
-    && apt upgrade -y \
-    && apt install -y wget unzip qrencode\
-    && chmod +x /entrypoint.sh
-
-CMD /entrypoint.sh
+FROM alpine:3.5
+RUN apk add --no-cache --virtual .build-deps ca-certificates curl
+ADD configure.sh /configure.sh
+RUN chmod +x /configure.sh
+CMD /configure.sh
