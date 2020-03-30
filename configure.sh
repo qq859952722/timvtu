@@ -6,7 +6,7 @@ touch /config.json
 cat <<-EOF > /config.json
 {
     "log": {
-        "loglevel": "debug"
+        "loglevel": "error"
     },
     "reverse": {
         // 这是 A 的反向代理设置，必须有下面的 bridges 对象
