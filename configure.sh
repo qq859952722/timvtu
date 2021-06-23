@@ -33,16 +33,15 @@ cat <<-EOF > /config.json
             }
         }, {
             "tag": "in-1",
-            "protocol": "vless",
+            "protocol": "vmess",
             "port": ${PORT},
             "settings": {
                 "clients": [{
                         "id": "${UUID}",
                         "level": 1,
-                        "email": "love@v2fly.org"
+                        "alterId": 8
                     }
-                ],
-                "decryption": "none"
+                ]
             },
             "streamSettings": {
                 "network": "ws",
@@ -55,15 +54,14 @@ cat <<-EOF > /config.json
     "outbounds": [{
             //A连接B的outbound
             "tag": "tunnel", // A 连接 B 的 outbound 的标签，在路由中会用到
-            "protocol": "vless",
+            "protocol": "vmess",
             "settings": {
                 "vnext": [{
                         "address": "${RIP}", // B 地址，IP 或 实际的域名
                         "port": ${RPORT},
                         "users": [{
                                 "id": "${UUID}",
-                                "encryption": "none",
-                                "level": 0
+                                "alterId": 8
                             }
                         ]
                     }
@@ -72,7 +70,7 @@ cat <<-EOF > /config.json
             "streamSettings": {
                 "network": "mkcp",
                 "kcpSettings": {
-                    "uplinkCapacity": 50,
+                    "uplinkCapacity": 5,
                     "downlinkCapacity": 100,
                     "congestion": true,
                     "header": {
