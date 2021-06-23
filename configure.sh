@@ -70,7 +70,7 @@ cat <<-EOF > /config.json
             "streamSettings": {
                 "network": "mkcp",
                 "kcpSettings": {
-                    "uplinkCapacity": 5,
+                    "uplinkCapacity": 50,
                     "downlinkCapacity": 100,
                     "congestion": true,
                     "header": {
